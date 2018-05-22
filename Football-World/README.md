@@ -1,18 +1,30 @@
-# FootballWorld
+# ChiefCookBook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+Working demo can be found @ https://baiganio.github.io/PU-SPA/
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `git checkout chief-cook-book`. This will switch you to the working branch.
+
+Run `npm install` to download all dependencies. Be aware that the installed packages are ignored when uploading to the repo so we need to install the again.
+
+Run `ng serve -o` to fire up your dev server. This will automatically opens the project at port `http://localhost:4200/` in your default browser. 
+
+The app will automatically reload if you change any of the source files and hit `Ctrl + S`
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component. 
+
+Run `ng g service service-name` to generate a new service.
+
+You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build ---prod --base-href "https://baiganio.github.io/PU-SPA/"` for production build. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
