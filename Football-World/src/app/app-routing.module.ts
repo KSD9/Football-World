@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent} from './navbar/navbar.component';
+import {LandingPageComponent} from './landing-page/landing-page.component';
 
 const routes: Routes =
 [
@@ -11,6 +12,9 @@ const routes: Routes =
 
 { path: 'login', component: LoginComponent },
 { path: 'register', component: RegisterComponent },
+{ path:'home', component:LandingPageComponent },
+{path: '', redirectTo: '/home' , pathMatch:'full'}
+
 
 ];
 
