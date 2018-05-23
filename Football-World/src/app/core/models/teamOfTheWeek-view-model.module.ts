@@ -2,17 +2,17 @@ import { TestBed, inject } from '@angular/core/testing';
 
 export class TeamOfTheWeekModel {
     Id: string;
-    Title: string;
-    Description: string;
-    Author: string;
+    Name: string;
+    Team: string;
+    Position: string;
     ImgSrc: string;
 
-    constructor(id?: string, title?: string,
-        description?: string, author?: string, img?: string) {
+    constructor(id?: string, name?: string,
+        team?: string, position?: string, img?: string) {
         this.Id = id;
-        this.Title = title;
-        this.Description = description;
-        this.Author = author;
+        this.Name = name;
+        this.Position = position;
+        this.Team = team;
         this.ImgSrc = img;
     }
 }

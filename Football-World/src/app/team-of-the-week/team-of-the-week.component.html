@@ -1,21 +1,20 @@
+<h3 style="font-family: 'Merienda One', sans-serif;">
+    Team Of The Week 
+</h3>
 <div class="row"> 
-  <div *ngFor="let recipe of recipes" >
-    <div class="col-xs-8">
-      <div class="polaroid">           
-          <h3>{{recipe.Title}}</h3>
-          <img src="{{recipe.ImgSrc}}" alt="" />    
-          <br>      
-          <br>
-      </div>
-    </div> 
+  <div *ngFor="let player of players" >
     <div class="col-xs-4">
-      <div class="polaroid"> 
-          <p>{{recipe.Description}}</p>
+      
+      <div class="polaroid">           
+          <h3>{{player.Name}}</h3>
+          <img src="{{player.ImgSrc}}" alt="" />    
+          <p>{{player.Position}}</p>
           <br>      
           <br>
-          <p>Author: {{recipe.Author}}</p>
-          <p>Recipe ID: {{recipe.Id}}</p>
+          <p>Team: {{player.Team}}</p>
+          <p>Player Number: {{player.Id}}</p>
       </div>
-    </div>        
+     
+  </div> 
   </div>
 </div>

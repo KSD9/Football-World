@@ -10,10 +10,10 @@ import {TeamOfTheWeekModel} from '../core/models/teamOfTheWeek-view-model.module
 })
 export class TeamOfTheWeekComponent implements OnInit {
 
-  recipes:TeamOfTheWeekModel[];
+  players:TeamOfTheWeekModel[];
 
   constructor(private teamOfTheWeekService:TeamOfTheWeekService) { 
-    this.recipes=teamOfTheWeekService.takeAllItalians();
+    this.players=teamOfTheWeekService.takeAllItalians();
   }
 
   ngOnInit() {
