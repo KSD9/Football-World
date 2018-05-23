@@ -1,0 +1,38 @@
+form {
+    width: 35%;
+    background-color: white;
+    height: 41rem;
+    position: absolute;
+    top: 18%;
+    left: 53%;
+    border-radius: 5px;
+    box-shadow: 1px 3px 10px #231f1f, -1px -3px 10px #231f1f;
+}
+
+.form-group {
+    padding: 2%;
+}
+
+input {
+    width: 80%;
+    margin: 0 auto;
+}
+
+label {
+    margin-left: 10%;
+}
+
+h1 {
+    padding: 2% 11%;
+    color: #fa8072;
+}
+
+.btn-signup {
+    background-color: #fa8072;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    margin-left: 52%;
+    padding: 2% 6%;
+}
