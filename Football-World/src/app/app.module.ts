@@ -7,6 +7,8 @@ import { RegisterComponent } from './register/register.component';
 import {AppRoutingModule} from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TeamOfTheWeekComponent } from './team-of-the-week/team-of-the-week.component';
+import {TeamOfTheWeekService} from '../app/core/services/teamOfTheWeek/teamOfTheWeek.service';
 
 @NgModule({
   declarations: [
@@ -14,14 +16,15 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    TeamOfTheWeekComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     
   ],
-  providers: [],
+  providers: [TeamOfTheWeekService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
