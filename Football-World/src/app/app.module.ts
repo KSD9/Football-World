@@ -21,7 +21,7 @@ import {AuthGuard} from '../app/core/services/Auth/auth.guard';
     NavbarComponent,
     LandingPageComponent,
     TeamOfTheWeekComponent
-  ],
+  ],  
   imports: [
     BrowserModule,
     AppRoutingModule,
