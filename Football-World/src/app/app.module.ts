@@ -12,6 +12,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { TeamOfTheWeekComponent } from './team-of-the-week/team-of-the-week.component';
 import {TeamOfTheWeekService} from '../app/core/services/teamOfTheWeek/teamOfTheWeek.service';
 import {AuthGuard} from '../app/core/services/Auth/auth.guard';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {AuthGuard} from '../app/core/services/Auth/auth.guard';
     RegisterComponent,
     NavbarComponent,
     LandingPageComponent,
-    TeamOfTheWeekComponent
+    TeamOfTheWeekComponent,
+    BlogComponent
   ],  
   imports: [
     BrowserModule,

@@ -44,7 +44,7 @@
           <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></li>
           <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
           <li class="divider dropdown-divider"></li>
-          <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
+          <li><a href="#"  *ngIf="isLoggedUser()"  (click)="logout()" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
         </ul>
       </li>
     </ul>

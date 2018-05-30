@@ -7,6 +7,7 @@ import { NavbarComponent} from './navbar/navbar.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {TeamOfTheWeekComponent} from './team-of-the-week/team-of-the-week.component';
 import {AuthGuard} from '../app/core/services/Auth/auth.guard';
+import {BlogComponent} from '../app/blog/blog.component';
 
 const routes: Routes =
 [
@@ -16,7 +17,8 @@ const routes: Routes =
 { path: 'register', component: RegisterComponent },
 { path: 'home', component:LandingPageComponent },
 { path: 'team-of-the-week',component: TeamOfTheWeekComponent, canActivate: [AuthGuard]},
-{ path: '', redirectTo: '/home' , pathMatch:'full'}
+{ path: '', redirectTo: '/home' , pathMatch:'full'},
+{ path: 'blog', component:BlogComponent}
 
 
 ];

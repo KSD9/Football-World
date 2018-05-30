@@ -21,5 +21,9 @@ else {
     return true;
    
  }
+
+}
+logout(){
+  sessionStorage.clear()
 }
 }
