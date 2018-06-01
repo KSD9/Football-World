@@ -3,8 +3,8 @@ form {
     background-color: white;
     height: 41rem;
     position: absolute;
-    top: 18%;
-    left: 11%;
+    top: 20%;
+    left: 30%;
     border-radius: 5px;
     box-shadow: 1px 3px 10px #231f1f, -1px -3px 10px #231f1f;
 }
@@ -24,15 +24,15 @@ label {
 
 h1 {
     padding: 2% 11%;
-    color: #fa8072;
+    color: #72cce2;
 }
 
 .btn-signin {
-    background-color: #fa8072;
+    background-color: #72cce2;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 24px;
-    margin-left: 9%;
+    margin-left: 52%;
     padding: 2% 6%;
 }
