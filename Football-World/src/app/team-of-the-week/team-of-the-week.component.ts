@@ -13,7 +13,7 @@ import {HttpModule}  from '@angular/http'
   styleUrls: ['./team-of-the-week.component.css']
 })
 export class TeamOfTheWeekComponent implements OnInit {
-  private loggedUser: string;
+  public loggedUser: string;
 
   players:TeamOfTheWeekModel[];
 
