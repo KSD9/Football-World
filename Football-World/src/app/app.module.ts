@@ -13,6 +13,7 @@ import { TeamOfTheWeekComponent } from './team-of-the-week/team-of-the-week.comp
 import {TeamOfTheWeekService} from '../app/core/services/teamOfTheWeek/teamOfTheWeek.service';
 import {AuthGuard} from '../app/core/services/Auth/auth.guard';
 import { BlogComponent } from './blog/blog.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BlogComponent } from './blog/blog.component';
     NavbarComponent,
     LandingPageComponent,
     TeamOfTheWeekComponent,
-    BlogComponent
+    BlogComponent,
+    ChatComponent
   ],  
   imports: [
     BrowserModule,
