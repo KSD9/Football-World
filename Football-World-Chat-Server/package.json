@@ -6,19 +6,17 @@
   "author": "Luis Aviles",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/index.js"
+    "start": "node dist/git commit -am 'websocket starting point'.js",
+    
   },
-  "engines": {
-    "node": "8.11.2"
-  },
+      "engines": {
+        "node": "8.11.2"
+      },
   "dependencies": {
     "@types/express": "^4.11.1",
     "@types/socket.io": "^1.4.34",
-    "bufferutil": "3.0.5",
-    "express": "4.16.3",
-    "socket.io": "^2.1.1",
-    "utf-8-validate": "4.0.2",
-    "ws": "5.2.0"
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
