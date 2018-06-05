@@ -15,6 +15,7 @@ import {AuthGuard} from '../app/core/services/Auth/auth.guard';
 import { BlogComponent } from './blog/blog.component';
 import { ChatComponent } from './chat/chat.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BlogService} from '../app/core/services/blog/blog.service';
 
 import { SharedModule } from './shared/shared.module';
 
@@ -50,7 +51,7 @@ import { SocketService } from './chat/shared/services/socket.service'
     MaterialModule
     
   ],
-  providers: [TeamOfTheWeekService,AuthService,AuthGuard,SocketService],
+  providers: [TeamOfTheWeekService,AuthService,AuthGuard,SocketService,BlogService],
   bootstrap: [AppComponent],
  
 })

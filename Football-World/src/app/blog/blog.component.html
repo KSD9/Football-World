@@ -1,36 +1,20 @@
 
 
 <div class="row">
-  <div class="col-xs-4">
-    <div class="polaroid">
-      
-   
-          <form action="POST" id="createPostForm">
-            <div class="login-group">
-              <!--TITLE-->
-              <div class="form-group">
-                <input type="text" maxlength="100" id="title" placeholder="Title" required="true">
-              </div>
-              <!--DESCRIPTION-->
-              <div class="form-group">
-                <input type="text" maxlength="1000" id="description" placeholder="Description" required="true">
-              </div>
-              <!--IMG URL-->
-              <div class="form-group">
-                <input type="text" maxlength="100" id="imgUrl" placeholder="Image url" required="true">
-              </div>
-              <!--Confirm Password-->
-              <div class="form-group">
-                <input type="text" maxlength="100" id="articleUrl" placeholder="Article url" required="true">
-              </div>
-      
-              <!--Button GO-->
-              <div class="form-group">
-                <input type="submit" class="login-button" value="GO" />
-              </div>
-            </div>
-          </form>
-        
+ 
+            
+    <div>
+        <ul class="items">
+            <li *ngFor="let post of posts">
+                <span>{{post.name}}</span>
+                <br>
+                <span>{{post.email}}</span>
+            </li>
+        </ul>
     </div>
-  </div>
+                
+                 
+            
+   
+       
 </div>
