@@ -20,7 +20,7 @@ const routes: Routes =
 { path: 'team-of-the-week',component: TeamOfTheWeekComponent, canActivate: [AuthGuard]},
 { path: '', redirectTo: '/home' , pathMatch:'full'},
 { path: 'blog', component:BlogComponent},
-{ path: 'chat', component:ChatComponent}
+{ path: 'chat', component:ChatComponent,canActivate: [AuthGuard]}
 
 
 ];

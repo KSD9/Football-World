@@ -8,6 +8,7 @@ import { User } from './shared/model/user';
 import { SocketService } from './shared/services/socket.service';
 import { DialogUserComponent } from './dialog-user/dialog-user.component';
 import { DialogUserType } from './dialog-user/dialog-user-type';
+import {AuthService} from '../core/services/Auth/auth.service';
 
 
 const AVATAR_URL = 'https://api.adorable.io/avatars/285';
@@ -20,6 +21,7 @@ const AVATAR_URL = 'https://api.adorable.io/avatars/285';
 export class ChatComponent implements OnInit, AfterViewInit {
   action = Action;
   user: User;
+  userName:string;
   messages: Message[] = [];
   messageContent: string;
   ioConnection: any;
@@ -30,7 +32,10 @@ export class ChatComponent implements OnInit, AfterViewInit {
       title: 'Welcome',
       dialogType: DialogUserType.NEW
     }
+    
   };
+
+  
 
   // getting a reference to the overall list, which is the parent container of the list items
   @ViewChild(MatList, { read: ElementRef }) matList: ElementRef;
@@ -39,7 +44,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
   @ViewChildren(MatListItem, { read: ElementRef }) matListItems: QueryList<MatListItem>;
 
   constructor(private socketService: SocketService,
-    public dialog: MatDialog) { }
+    public dialog: MatDialog,private authService:AuthService) { }
 
   ngOnInit(): void {
     this.initModel();
@@ -49,6 +54,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
     }, 0);
   }
 
+  
   ngAfterViewInit(): void {
     // subscribing to any changes in the list of items / messages
     this.matListItems.changes.subscribe(elements => {
@@ -96,7 +102,10 @@ export class ChatComponent implements OnInit, AfterViewInit {
   private getRandomId(): number {
     return Math.floor(Math.random() * (1000000)) + 1;
   }
-
+  public getUserName(){
+    this.userName = sessionStorage.getItem("currentUser");
+    return this.userName
+  }
   public onClickUserInfo() {
     this.openUserPopup({
       data: {
@@ -114,7 +123,7 @@ export class ChatComponent implements OnInit, AfterViewInit {
         return;
       }
 
-      this.user.name = paramsDialog.username;
+      this.user.name = this.getUserName();
       if (paramsDialog.dialogType === DialogUserType.NEW) {
         this.initIoConnection();
         this.sendNotification(paramsDialog, Action.JOINED);

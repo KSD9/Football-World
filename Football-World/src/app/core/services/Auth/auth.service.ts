@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
 
-
+private userName;
     constructor(private router: Router){}
     register(email: string, password: string) {
         firebase.auth()
@@ -36,6 +36,11 @@ export class AuthService {
             
             return false;
         }
+    }
+
+    getUserName(){
+        userName = sessionStorage.getItem("currentUser")
+        return userName
     }
 
     logout(){
