@@ -22,7 +22,7 @@ import { MaterialModule } from './shared/material/material.module';
 
 
 import { SocketService } from './chat/shared/services/socket.service'
-import { DialogUserComponent } from './chat/dialog-user/dialog-user.component';
+
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { DialogUserComponent } from './chat/dialog-user/dialog-user.component';
     TeamOfTheWeekComponent,
     BlogComponent,
     ChatComponent,
-    DialogUserComponent
+  
   ],  
   imports: [
     BrowserModule,
@@ -52,6 +52,6 @@ import { DialogUserComponent } from './chat/dialog-user/dialog-user.component';
   ],
   providers: [TeamOfTheWeekService,AuthService,AuthGuard,SocketService],
   bootstrap: [AppComponent],
-  entryComponents: [DialogUserComponent]
+ 
 })
 export class AppModule { }
