@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from './../core/services/Auth/auth.service';
 import { NgForm } from '@angular/forms';
+import { environment } from '../../environments/environment';
 
 
 @Component({

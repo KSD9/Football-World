@@ -14,12 +14,17 @@ import { NgForm } from '@angular/forms';
 export class BlogComponent implements OnInit {
 
   
-  data: any = {};
-  private apiUrl= 'https://jsonplaceholder.typicode.com/posts';
+  public loggedUser:string;
+  
+  
   
 
   constructor(private blogService:BlogService,private http: Http) { 
     this.getItems();
+    
+    
+  
+  
    
     
   
@@ -32,7 +37,8 @@ export class BlogComponent implements OnInit {
     title:'',
     description:'',
     imageUrl:'',
-    articleUrl:''
+    articleUrl:'',
+    createdByUser:this.getUser(),
   };
   
 
@@ -40,7 +46,11 @@ export class BlogComponent implements OnInit {
     this.blogService.getPosts().subscribe(posts => this.postsModels= posts); console.log(this.postsModels);
     }
 
-   
+  
+   getUser(){
+    this.loggedUser = sessionStorage.getItem("currentUser");
+    return this.loggedUser.toString();
+   } 
 onSubmit (){
  
 
@@ -49,12 +59,14 @@ onSubmit (){
   this.post.description='';
   this.post.imageUrl= '';
   this.post.articleUrl='';
+  
 
 }
   
   
 
   ngOnInit() {
+   
     
   }
 

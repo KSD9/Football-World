@@ -6,6 +6,7 @@ export interface BlogViewModel {
     description?: string;
     imageUrl?: string;
     articleUrl?: string;
+    createdByUser?:string;
 
 
     }

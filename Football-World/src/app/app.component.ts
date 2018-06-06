@@ -14,7 +14,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 export class AppComponent implements OnInit {
 
   ngOnInit() {
-    firebase.initializeApp({
+    firebase.initializeApp( {
       apiKey: "AIzaSyDKW4Ncm0294Hg-dvdhaJkjb7TR2rCDf_U",
       authDomain: "auth-project-127e4.firebaseapp.com",
       databaseURL: "https://auth-project-127e4.firebaseio.com",
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
       messagingSenderId: "752453873871"
   
     });
-   
+  
     
   }
 }
