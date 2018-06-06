@@ -1,24 +1,20 @@
 
 
-<div class="row">
  
+<div class="row"> 
+        <div *ngFor="let post of postsModels" >
+          <div class="col-xs-12">
             
-    <div>
-        <ul class="items">
-            <li *ngFor="let post of postsModels">
-                <span>{{post.title}}</span>
+            <div class="polaroid">           
+                <h3>{{post.title}}</h3>
+                <img src="{{post.imageUrl}}" alt="" />    
+                <p>{{post.description}}</p>
+                <br>      
                 <br>
-                <span>{{post.description}}</span>
-                <br>
-                <span>{{post.imageUrl}}</span>
-                <br>
-                <span>{{post.articleUrl}}</span>
-            </li>
-        </ul>
-    </div>
-                <button (click)="getItems()" ></button>
-                 
-            
-   
-       
-</div>
+                <p>Read more: {{post.articleUrl}}</p>
+                
+            </div>
+           
+        </div> 
+        </div>
+      </div>
