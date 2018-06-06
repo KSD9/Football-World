@@ -5,14 +5,18 @@
             
     <div>
         <ul class="items">
-            <li *ngFor="let post of posts">
-                <span>{{post.name}}</span>
+            <li *ngFor="let post of postsModels">
+                <span>{{post.title}}</span>
                 <br>
-                <span>{{post.email}}</span>
+                <span>{{post.description}}</span>
+                <br>
+                <span>{{post.imageUrl}}</span>
+                <br>
+                <span>{{post.articleUrl}}</span>
             </li>
         </ul>
     </div>
-                
+                <button (click)="getItems()" ></button>
                  
             
    

@@ -1,18 +1,11 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-export class BlogViewModel {
-    Id: string;
-    Name: string;
-    Team: string;
-    Position: string;
-    ImgSrc: string;
+export interface BlogViewModel {
+    id?:string;
+    Title?: string;
+    Description?: string;
+    ImageUrl?: string;
+    ArticleUrl?: string;
 
-    constructor(id?: string, name?: string,
-        team?: string, position?: string, img?: string) {
-        this.Id = id;
-        this.Name = name;
-        this.Position = position;
-        this.Team = team;
-        this.ImgSrc = img;
+
     }
-}

@@ -17,21 +17,23 @@ export class BlogComponent implements OnInit {
   
 
   constructor(private blogService:BlogService,private http: Http) { 
-    this.getPosts();
-    
-     
+    this.getItems();
     
   
   }
   
-  private posts:BlogViewModel[] = [];
+  private postsModels:BlogViewModel[];
   private errorMessage:any = '';
-  getPosts() {
-    this.blogService.getData()
-        .subscribe(
-            posts => this.posts = posts,
-            error => this.errorMessage = <any>error);
-}
+  
+
+  getItems(){
+    this.blogService.getItems().subscribe(posts => this.postsModels= posts); console.log(this.postsModels);
+    }
+
+   
+
+  
+  
 
   ngOnInit() {
     

@@ -23,6 +23,9 @@ import { MaterialModule } from './shared/material/material.module';
 
 
 import { SocketService } from './chat/shared/services/socket.service'
+import {AngularFirestoreModule,AngularFirestore} from 'angularfire2/firestore';
+import {AngularFireModule} from 'angularfire2';
+import { environment } from '../environments/environment';
 
 
 
@@ -44,14 +47,15 @@ import { SocketService } from './chat/shared/services/socket.service'
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    
+    AngularFirestoreModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     MaterialModule
     
   ],
-  providers: [TeamOfTheWeekService,AuthService,AuthGuard,SocketService,BlogService],
+  providers: [TeamOfTheWeekService,AuthService,AuthGuard,SocketService,BlogService,AngularFirestore],
   bootstrap: [AppComponent],
  
 })
