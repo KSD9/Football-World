@@ -11,10 +11,42 @@
                 <p>{{post.description}}</p>
                 <br>      
                 <br>
-                <p>Read more: {{post.articleUrl}}</p>
+                <a href="{{post.articleUrl}}">Read more: </a>
                 
             </div>
            
         </div> 
         </div>
       </div>
+
+      <div id="create-post-form" class="text-left">
+            <div class="main-login-form">
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm" id="createPostForm">
+                    <div class="login-group">
+                        <!--TITLE-->
+                        <div class="form-group">
+                            <input type="text" maxlength="100" name = "title" id="title" placeholder="Title" [(ngModel)] ="post.title" required="true">
+                            
+                        </div>
+                       
+                        <!--DESCRIPTION-->
+                        <div class="form-group">
+                            <input type="text" maxlength="1000" name="description" id="description" placeholder="Description"[(ngModel)]="post.description" required="true">
+                        </div>
+                        <!--IMG URL-->
+                        <div class="form-group">
+                            <input type="text"  maxlength="100" name="imageUrl" id="imageUrl" placeholder="Image url" [(ngModel)]="post.imageUrl"required="true">
+                        </div>
+                        <!--Confirm Password-->
+                        <div class="form-group">
+                            <input type="text" maxlength="100" id="articleUrl" name = "articleUrl"placeholder="Article url" [(ngModel)]="post.articleUrl" required="true">
+                        </div>
+
+                        <!--Button GO-->
+                        <div class="form-group">
+                            <input type="submit" class="login-button" value="GO" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>

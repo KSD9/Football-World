@@ -23,15 +23,32 @@ export class BlogService {
   posts: Observable<BlogViewModel[]>;
   constructor(private http:Http,public fireStore:AngularFirestore)
   { 
-    this.posts = this.fireStore.collection('posts').valueChanges();
-    console.log(this.posts);
+    this.postsCollection = this.fireStore.collection('posts');
+    this.posts = this.postsCollection.snapshotChanges().map(changes=>{
+      return changes.map(a=>{
+        const data = a.payload.doc.data() as BlogViewModel;
+        data.id=a.payload.doc.id;
+        return data;
+      })
+    })
+   // this.posts = this.fireStore.collection('posts').valueChanges();
+    
   }
 
- getItems(){
+ getPosts(){
   
   
    return this.posts;
  }
+
+ addPost(post:BlogViewModel) {
+
+  //Add the new task to the collection
+
+  this.postsCollection.add(post);
+
+} 
+
 
  
 }
