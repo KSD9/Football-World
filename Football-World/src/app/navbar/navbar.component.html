@@ -1,6 +1,9 @@
 <nav class="navbar navbar-default navbar-expand-xl navbar-light">
   <div class="navbar-header d-flex col">
-    <a routerLink="/home" class="navbar-brand" href="#"><i class="fa fa-book"></i>Football World</a>  		
+    <a routerLink="/home" class="navbar-brand" href="#"><a href="#"  data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
+      <img src="./assets/images/ballbg.png" class="avatar" alt="Avatar"> 
+       
+    </a>Football World</a>  		
     <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
       <span class="navbar-toggler-icon"></span>
       <span class="icon-bar"></span>
@@ -20,13 +23,7 @@
       <li class="nav-item">
           <a routerLink="/team-of-the-week" class="single-menu-element-link">Team Of the Week</a>
       </li>
-      <li class="nav-item dropdown">
-        <a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#">Recipes <b class="caret"></b></a>
-        <ul class="dropdown-menu">					
-          <li><a routerLink="/team-of-the-week" class="single-menu-element-link">Italian Foods</a></li>
-          <li><a routerLink="/spanish" class="single-menu-element-link">Spanish Foods</a></li>
-        </ul>
-      </li>
+     
       <li class="nav-item">
           <a routerLink="/blog" class="single-menu-element-link">Blog</a>
       </li>
@@ -35,17 +32,15 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right ml-auto">
-      <li class="nav-item"><a href="#" *ngIf="isLoggedUser()" class="nav-link notifications"><i class="fa fa-bell-o"></i><span class="badge">1</span></a></li>
-      <li class="nav-item"><a href="#" *ngIf="isLoggedUser()" class="nav-link messages"><i class="fa fa-envelope-o"></i><span class="badge">10</span></a></li>
+      
       <li class="nav-item dropdown">
         <a href="#" *ngIf="isLoggedUser()" data-toggle="dropdown" class="nav-link dropdown-toggle user-action">
-          <img src="./assets/images/skull.png" class="avatar" alt="Avatar"> 
-          Chief Skull Master <b class="caret"></b>
+          <img src="./assets/images/icon.png" class="avatar" alt="Avatar"> 
+          Profile <b class="caret"></b>
         </a>
         <ul class="dropdown-menu" *ngIf="isLoggedUser()">
-          <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="fa fa-user-o"></i> Profile</a></li>
-          <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="fa fa-calendar-o"></i> Calendar</a></li>
-          <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="fa fa-sliders"></i> Settings</a></li>
+          <li><a href="#" *ngIf="isLoggedUser()" class="dropdown-item"><i class="fa fa-user-o"></i> Settings</a></li>
+         
           <li class="divider dropdown-divider"></li>
           <li><a href="#"  *ngIf="isLoggedUser()"  (click)="logout()" class="dropdown-item"><i class="material-icons">&#xE8AC;</i> Logout</a></li>
         </ul>
